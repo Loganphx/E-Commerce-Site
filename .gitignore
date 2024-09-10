@@ -401,3 +401,6 @@ FodyWeavers.xsd
 /.idea/.idea.E-Commerce-Site.dir/.idea/discord.xml
 /.idea/.idea.E-Commerce-Site.dir/.idea/indexLayout.xml
 /.idea/.idea.E-Commerce-Site.dir/.idea/vcs.xml
+
+
+/API/bin/*
