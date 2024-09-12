@@ -7,6 +7,7 @@ public class ProductSpecParams
     public int PageIndex
     {
         get => _pageIndex;
+        // Clamp to prevent the index from being out of bounds or negative.
         set => _pageIndex = Math.Max(value, 1);
     }
 
@@ -15,7 +16,8 @@ public class ProductSpecParams
     public int PageSize
     {
         get => _pageSize;
-        set => _pageSize = Math.Clamp(value, 1, MaxPageSize);
+        // Clamp to prevent the page size from being less than 1 or greater than the max
+        set => _pageSize = Math.Clamp(value, 1, MaxPageSize); 
     }
     
     private List<string> _brands = [];
