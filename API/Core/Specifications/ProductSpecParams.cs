@@ -3,7 +3,12 @@ namespace Core.Specifications;
 public class ProductSpecParams
 {
     private const int MaxPageSize = 50;
-    public int PageIndex { get; set; } = 1;
+    private int _pageIndex = 1;
+    public int PageIndex
+    {
+        get => _pageIndex;
+        set => _pageIndex = Math.Max(value, 1);
+    }
 
     private int _pageSize = 6;
 
