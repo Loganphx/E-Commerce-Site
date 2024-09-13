@@ -1,4 +1,5 @@
 using System;
+using API.Middleware;
 using Core.Interfaces;
 using Infrastructure.Config;
 using Infrastructure.Data;
@@ -36,6 +37,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();
 
 try
